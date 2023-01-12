@@ -5,3 +5,5 @@ nodemon  package: Nodemon allow us to run node js project continuously without n
 
 
  http - modal which handle request responses. 
+
+ Buffer comes in readFile if 'utf8' parameter is not there  
