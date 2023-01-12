@@ -1,7 +1,6 @@
-module.exports={
-    x:10,
-    y:20,
-    z:function(){
-        return 10;
-    }
-}
+ data = [
+  { name: "Anil sidhu", email: "anil@test.com" },
+  { name: "Anil sidhu", email: "anil@test.com" },
+  { name: "Anil sidhu", email: "anil@test.com" },
+];
+module.exports=data

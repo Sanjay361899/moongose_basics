@@ -1,0 +1,7 @@
+nodemon  package: Nodemon allow us to run node js project continuously without not running it again and again...
+
+
+ node js is "async" language which is single threaded language (which means that it will run one task at a time bcz of single threaded but bcz of async nature the order of execution of command is not serial it is async if one task is complex then it will not wait it run other task and show output of one after execution.) 
+
+
+ http - modal which handle request responses. 

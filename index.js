@@ -1,12 +1,6 @@
-const fs = require("fs").writeFileSync;
-const http = require("http");
-const colors= require('colors');
-const app = require("./app");
-http.createServer((req, resp) => {
-    resp.write( "<h1>Hello</h1>");
-    resp.end();
-  })
-  .listen(4500);
-console.warn(app.z(), "hiiii");
-console.log(__dirname.bgBlue);
-console.log(__filename);
+const fs = require("fs");
+const path=require("path");
+const dirname=path.join(__dirname,'files');
+for(i=0;i<5;i++){
+    fs.writeFileSync(`${dirname}/hello${i}.txt`,"a simple file text file")
+}
