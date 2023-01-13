@@ -3,8 +3,15 @@ const path = require("path");
 
 const app = express();
 
-app.set("view engine", "ejs");
-app.get('',(req,resp)=>{
-    resp.render('profile',{name:"Bhasin"});
+const reqFilter= (req, res, next)=>{
+    if(!req.query.age){
+        res.send("provide age ...")
+    }else{
+        next();
+    }
+}
+app.use(reqFilter);
+app.get('/',(req,res)=>{
+    res.send('Home Page')
 })
 app.listen(5000);
