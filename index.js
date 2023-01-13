@@ -1,15 +1,10 @@
-const express = require('express');
-const path=require('path');
-const app= express();
+const express = require("express");
+const path = require("path");
 
- const publicPath= path.join(__dirname,'public');
- console.log(publicPath);
- console.log(__dirname);   
-// app.use(express.static(publicPath));
+const app = express();
+
+app.set("view engine", "ejs");
 app.get('',(req,resp)=>{
-    resp.sendFile(`${publicPath}/about.html`);
+    resp.render('profile',{name:"Bhasin"});
 })
-app.get('*',(req,resp)=>{
-    resp.sendFile(`${publicPath}/pagenot.html`)
-})
- app.listen(5000);
+app.listen(5000);
