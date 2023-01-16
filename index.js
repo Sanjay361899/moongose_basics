@@ -1,17 +1,13 @@
-const express = require("express");
-const path = require("path");
+const { MongoClient } = require("mongodb");
+const url = "mongodb://localhost:27017";
+ 
+const client = new MongoClient(url);
 
-const app = express();
-
-const reqFilter= (req, res, next)=>{
-    if(!req.query.age){
-        res.send("provide age ...")
-    }else{
-        next();
-    }
+async function getData() {
+  let connectmongodb = await client.connect();
+  let selectdb =connectmongodb.db("e-comm");
+  let selectCollection = selectdb.collection("products");
+  const response = await selectCollection.find({}).toArray();
+  console.log(response);
 }
-app.use(reqFilter);
-app.get('/',(req,res)=>{
-    res.send('Home Page')
-})
-app.listen(5000);
+getData();

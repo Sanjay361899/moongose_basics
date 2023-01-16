@@ -7,3 +7,13 @@ nodemon  package: Nodemon allow us to run node js project continuously without n
  http - modal which handle request responses. 
 
  Buffer comes in readFile if 'utf8' parameter is not there  
+
+ MONGODB:::::
+   it is a no-sql database.
+   the data stored in a collection.
+   collection don't have row and columns.
+   Data is stored in the form of the object.
+
+in sql we store data in the form of the tables and in the table we have rows and column which is a structured way to store the data in which there is a specified number of keys which should be must present in a table  but  in mongo data is in object form there should  not be keys which must be required no structure....
+
+when data is not structured form comes then mongo is the best way to do it and sql is not good or suitable there 
