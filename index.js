@@ -1,8 +1,8 @@
 const dbConnect = require("./mongodb");
 
 const getData = async () => {
-  const result = await dbConnect();
-  const response = await result.find({}).toArray();
+  const mongo_connect = await dbConnect();
+  const response = await mongo_connect.find({}).toArray();
   console.log(response);
 };
 

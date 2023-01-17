@@ -1,8 +1,8 @@
 const dbConnect=require('./mongodb');
 
 const insert= async()=>{
-    const mongo_get=await dbConnect();
-    const mongo_put=mongo_get.insert([{
+    const mongo_connect=await dbConnect();
+    const mongo_put=mongo_connect.insert([{
         name:"nordss", brand:"one plus", price:320,category:"mobile"
     },
     {
